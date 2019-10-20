@@ -1,0 +1,32 @@
+__pycache__/
+*.py[cod]
+/build
+db.sqlite3
+# output of 'manage.py collectstatic'
+staticfiles/
+# Virtualenv is recreated as needed. Don't commit.
+venv/
+env/
+# Sensitive environment vars
+.env
+local_settings.py
+# Misc stuff
+pizzatypes.txt
+pizzasize.py
+
+# code coverage
+.coverage
+htmlcov/
+/coverage
+
+# logs, etc
+*.log
+docs/
+
+# IDE and MacOS files
+.idea/
+*.iml
+.project
+.pydevproject
+.vscode/
+.DSStore
