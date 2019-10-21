@@ -1,13 +1,12 @@
 from pizza import Pizza
 
-#
 # This function shows a limitation on tool-assisted
 # refactoring in a dynamic language like Python.
 #
-# When you rename the Pizza get_price method,
-# does it change here?
+# When you rename the Pizza getPrice method to get_price,
+# does it rename the method here?
 # - if no type annotation on the pizza parameter, maybe not
-# - if a ':Pizza' type annotation on the parameter, it should
+# - if use type annotation ':Pizza' on the parameter, it should
 
 def print_pizza( pizza ):
     """

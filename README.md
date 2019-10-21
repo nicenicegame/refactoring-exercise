@@ -67,9 +67,9 @@ In the Pizza class replace 'small', 'medium', and 'large" with named constants. 
     - Then do Refactoring->Rename again.
     - Any difference?
 
-5. Rename `addTopping` in Pizza.  Did the IDE also rename it in pizzashop?
+5. Rename `addTopping` in Pizza to `add_topping`.  Did the IDE also rename it in pizzashop?
 
-6. Run the code. Verify the results are the same.
+6. Run the code. Verify the code works the same.
 
 ## 3. Extract Method
 
