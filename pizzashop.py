@@ -12,7 +12,8 @@ def print_pizza( pizza ):
     """
     Print a description of a pizza, along with its price.
     """
-    # create printable description of the pizza
+    # create printable description of the pizza such as
+    # "small pizza with muschroom" or "small plain pizza"
     description = pizza.size
     if pizza.toppings:
         description += " pizza with "+ ", ".join(pizza.toppings)
