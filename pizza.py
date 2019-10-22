@@ -1,7 +1,7 @@
 class Pizza:
     """A pizza with a size and optional toppings."""
 
-    def __init__(self, size: str):
+    def __init__(self, size):
         self.size = size
         self.toppings = []
 
