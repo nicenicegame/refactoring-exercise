@@ -1,4 +1,5 @@
-from pizza import Pizza
+from pizza import Pizza, PizzaSize
+
 
 # This function shows a limitation on tool-assisted
 # refactoring in a dynamic language like Python.
@@ -8,31 +9,31 @@ from pizza import Pizza
 # - if no type annotation on the pizza parameter, maybe not
 # - if use type annotation ':Pizza' on the parameter, it should
 
-def print_pizza( pizza ):
+def print_pizza(pizza: Pizza):
     """
     Print a description of a pizza, along with its price.
     """
-    # create printable description of the pizza such as
-    # "small pizza with muschroom" or "small plain pizza"
-    description = pizza.size
-    if pizza.toppings:
-        description += " pizza with "+ ", ".join(pizza.toppings)
-    else:
-        description += " plain pizza"
-    print(f"A {description}")
-    print("Price:", pizza.getPrice())
+    print(f"A {str(pizza)}")
+    print("Price:", pizza.get_price())
+
+
+# def test_pizza_sizes():
+#     for size in PizzaSize:
+#         print(size.name, "pizza price:", size.value)
 
 
 if __name__ == "__main__":
-    pizza = Pizza('small')
-    pizza.addTopping("mushroom")
-    pizza.addTopping("tomato")
-    pizza.addTopping("pinapple")
+    pizza = Pizza(PizzaSize.small)
+    pizza.add_topping("mushroom")
+    pizza.add_topping("tomato")
+    pizza.add_topping("pinapple")
     print_pizza(pizza)
 
-    pizza2 = Pizza("medium")
+    pizza2 = Pizza(PizzaSize.medium)
     print_pizza(pizza2)
 
-    pizza3 = Pizza("large")
-    pizza3.addTopping("seafood")
+    pizza3 = Pizza(PizzaSize.large)
+    pizza3.add_topping("seafood")
     print_pizza(pizza3)
+
+    # test_pizza_sizes()
